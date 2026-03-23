@@ -1,0 +1,210 @@
+:root {
+    --crema: #FBF9F6;
+    --marron-roble: #99795A;
+    --nogal-oscuro: #70543D;
+    --plata: #A7BCC1;
+    --cafe-profundo: #4A3728;
+    --oro-viejo: #BF9B30;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--crema);
+    color: var(--cafe-profundo);
+    line-height: 1.6;
+}
+
+/* Tipografía de Títulos */
+h1, h2, h3, h4, .active {
+    font-family: 'Almendra', serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img { height: 40px; }
+
+.logo strong { display: block; color: var(--nogal-oscuro); font-size: 1.2rem; }
+
+.logo span { font-size: 0.8rem; color: var(--marron-roble); }
+
+nav a {
+    text-decoration: none;
+    color: var(--marron-roble);
+    margin: 0 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+nav a.active {
+    color: var(--nogal-oscuro);
+    border-bottom: 2px solid var(--marron-roble);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(74, 55, 40, 0.7), rgba(74, 55, 40, 0.7)), 
+                url('hero-bg.jpg') center/cover; /* Usar el degradado de tu foto */
+    color: var(--crema);
+    padding: 100px 10%;
+    text-align: left;
+}
+
+.badge-icon {
+    background: var(--white);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge-icon img {
+    height: 3rem;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 5px; }
+
+.hero .subtitle { font-family: 'Montserrat'; opacity: 0.8; margin-bottom: 30px; }
+
+.hero h2 { font-size: 2.2rem; max-width: 800px; margin-bottom: 20px; }
+
+.hero .description { max-width: 700px; margin-bottom: 40px; opacity: 0.9; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-card strong { display: block; font-size: 1.5rem; }
+
+/* Botones */
+.btn-primary {
+    background-color: var(--oro-viejo);
+    color: var(--white);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary.large { padding: 15px 40px; font-size: 1.1rem; }
+
+/* Body - Challenge */
+.container { padding: 80px 10%; }
+
+.challenge {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.label {
+    background: #F2EDE4;
+    color: var(--oro-viejo);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.challenge h3 { font-size: 2.5rem; margin: 20px 0; color: var(--nogal-oscuro); }
+
+.features { list-style: none; margin-top: 20px; }
+
+.features li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+
+.features li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--oro-viejo);
+    font-weight: bold;
+}
+
+.challenge-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.challenge-images img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--cafe-profundo);
+    color: var(--crema);
+    padding: 60px 10% 20px;
+}
+
+.footer-top {
+    text-align: center;
+    border-bottom: 1px solid rgba(251, 249, 246, 0.1);
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h4 { margin-bottom: 20px; font-size: 1.4rem; }
+
+.footer-col a {
+    display: block;
+    color: var(--crema);
+    text-decoration: none;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
